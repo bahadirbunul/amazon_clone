@@ -30,3 +30,12 @@ next_btn.addEventListener("click", (e) => {
   }
   changeSlide();
 });
+
+const scrollContainer = document.querySelectorAll(".products");
+
+for (const item of scrollContainer) {
+  item.addEventListener("whell", (e) => {
+    e.preventDefault();
+    item.scrollLeft += e.deltaY;
+  });
+}
